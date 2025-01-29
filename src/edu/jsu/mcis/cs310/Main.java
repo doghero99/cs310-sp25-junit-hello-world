@@ -2,22 +2,28 @@ package edu.jsu.mcis.cs310;
 
 public class Main {
 
-    public static void main(String[] args) {
-        
-        Main m = new Main();
-        String message = m.getGreeting();
-        
-        System.out.println(message);
-        System.out.println(m.reverse(message));
-        
-    }
-    
+    /**
+     * Returns the greeting message.
+     * @return a "Hello, World!" greeting message.
+     */
     public String getGreeting() {
         return "Hello, World!";
     }
-    
-    public String reverse(String message) {
-        return message;
+
+    /**
+     * Reverses the input string.
+     * @param str the string to be reversed.
+     * @return the reversed string.
+     */
+    public String reverse(String str) {
+        return new StringBuilder(str).reverse().toString();
     }
-    
+
+    public static void main(String[] args) {
+        Main main = new Main();
+
+        // Print the greeting and the reversed greeting
+        System.out.println(main.getGreeting());
+        System.out.println(main.reverse(main.getGreeting()));
+    }
 }
